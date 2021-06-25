@@ -33,6 +33,42 @@ const display = () => {
   for (let i = 0; i < fruits.length; i++) {
     // TODO: формируем новый элемент <li> при помощи document.createElement,
     // и добавляем в конец списка fruitsList при помощи document.appendChild
+
+    //создаем новый элемент li
+    let fruit__item_fruit_violet = document.createElement(`li`);
+    //добавляем класс к новому элементу li
+    fruit__item_fruit_violet.classList.add(`fruit__item_fruit_violet`);
+    // добавляем вновь созданный элемент в ul
+    fruitsList.appendChild(fruit__item_fruit_violet);
+
+    //получаем ссылку на вновь созданный li
+    let fruit__item_fruit_violet = document.querySelector(`.fruit__item_fruit_violet`);
+    // создаем новый элемент div с классом fruit__info
+    let fruit__info = document.createElement(`div`);
+    //добавляем класс к новому элементу div
+    fruit__info.classList.add(`fruit__info`);
+    // добавляем вновь созданный элемент в li
+    fruit__item_fruit_violet.appendChild(`fruit__info`);
+
+    //получаем ссылку на вновь созданный div
+    let fruit__info = document.querySelector(`fruit__info`);
+    // создаем новый элемент div с классом index_0
+    let index_0 = document.createElement(`div`);
+    //добавляем класс к новому элементу div
+    index_0.classList.add(`index_0`);
+    //добавляем текст в div index_0
+    index_0.textContent = `index: 0`;
+    // добавляем вновь созданный элемент в div fruit__info
+    fruit__info.appendChild(`index_0`);
+
+    // создаем новый элемент div с классом kind_0
+    let kind_0 = document.createElement(`div`);
+    //добавляем класс к элементу div fruit__info
+    kind_0.classList.add(`kind_0`);
+    //добавляем текст в div kind_0
+    kind_0.textContent = `kind: Мангустин`;
+    // добавляем вновь созданный элемент в div fruit__info
+    fruit__info.appendChild(`kind_0`);
   }
 };
 
