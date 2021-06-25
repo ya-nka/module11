@@ -63,12 +63,28 @@ const display = () => {
 
     // создаем новый элемент div с классом kind_0
     let kind_0 = document.createElement(`div`);
-    //добавляем класс к элементу div fruit__info
+    //добавляем класс к элементу div
     kind_0.classList.add(`kind_0`);
     //добавляем текст в div kind_0
     kind_0.textContent = `kind: Мангустин`;
     // добавляем вновь созданный элемент в div fruit__info
     fruit__info.appendChild(`kind_0`);
+
+    let color_0 = document.createElement(`div`);
+    //добавляем класс к элементу div
+    color_0.classList.add(`color_0`);
+    //добавляем текст в div color_0
+    color_0.textContent = `color: фиолетовый`;
+    // добавляем вновь созданный элемент в div fruit__info
+    fruit__info.appendChild(`color_0`);
+
+    let weight_0 = document.createElement(`div`);
+    //добавляем класс к элементу div
+    weight_0.classList.add(`weight_0`);
+    //добавляем текст в div weight_0
+    weight_0.textContent = `(кг): 13`;
+    // добавляем вновь созданный элемент в div fruit__info
+    fruit__info.appendChild(`weight_0`);
   }
 };
 
