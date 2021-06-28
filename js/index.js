@@ -79,10 +79,6 @@ const display = () => {
 
     fruitItemFruitViolet.appendChild(fruitInfo);
     fruitsList.appendChild(fruitItemFruitViolet);
-  }
-  for (let j = i; j < fruits.length; j++) {
-    // TODO: формируем новый элемент <li> при помощи document.createElement,
-    // и добавляем в конец списка fruitsList при помощи document.appendChild
 
     //создаем новый элемент li
     let fruitItemFruitGreen = document.createElement(`li`);
@@ -111,13 +107,6 @@ const display = () => {
     let weight0 = document.createElement(`div`);
     //добавляем класс к элементу div
     weight0.classList.add(`weight_0`);
-
-    //Заполняем divs текстом://
-
-    index0.textContent = `index: ${i}`;
-    kind0.textContent = `kind: ${fruits[i].kind}`;
-    color0.textContent = `color: ${fruits[i].color}`;
-    weight0.textContent = `weight: ${fruits[i].weight}`;
 
     //добавляем  div/li/ul
     fruitInfo.appendChild(index0);
