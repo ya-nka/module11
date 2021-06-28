@@ -35,56 +35,98 @@ const display = () => {
     // и добавляем в конец списка fruitsList при помощи document.appendChild
 
     //создаем новый элемент li
-    let fruit__item_fruit_violet = document.createElement(`li`);
+    let fruitItemFruitViolet = document.createElement(`li`);
     //добавляем класс к новому элементу li
-    fruit__item_fruit_violet.classList.add(`fruit__item_fruit_violet`);
+    fruitItemFruitViolet.classList.add(`fruit__item_fruit_violet`);
     // добавляем вновь созданный элемент в ul
-    fruitsList.appendChild(fruit__item_fruit_violet);
+    // fruitsList.appendChild(`fruitItemFruitViolet`);//
 
-    //получаем ссылку на вновь созданный li
-    let fruit__item_fruit_violet = document.querySelector(`.fruit__item_fruit_violet`);
     // создаем новый элемент div с классом fruit__info
-    let fruit__info = document.createElement(`div`);
+    let fruitInfo = document.createElement(`div`);
     //добавляем класс к новому элементу div
-    fruit__info.classList.add(`fruit__info`);
-    // добавляем вновь созданный элемент в li
-    fruit__item_fruit_violet.appendChild(`fruit__info`);
+    fruitInfo.classList.add(`fruit__info`);
 
-    //получаем ссылку на вновь созданный div
-    let fruit__info = document.querySelector(`fruit__info`);
     // создаем новый элемент div с классом index_0
-    let index_0 = document.createElement(`div`);
+    let index0 = document.createElement(`div`);
     //добавляем класс к новому элементу div
-    index_0.classList.add(`index_0`);
-    //добавляем текст в div index_0
-    index_0.textContent = `index: 0`;
-    // добавляем вновь созданный элемент в div fruit__info
-    fruit__info.appendChild(`index_0`);
+    index0.classList.add(`index_0`);
 
     // создаем новый элемент div с классом kind_0
-    let kind_0 = document.createElement(`div`);
+    let kind0 = document.createElement(`div`);
     //добавляем класс к элементу div
-    kind_0.classList.add(`kind_0`);
-    //добавляем текст в div kind_0
-    kind_0.textContent = `kind: Мангустин`;
-    // добавляем вновь созданный элемент в div fruit__info
-    fruit__info.appendChild(`kind_0`);
+    kind0.classList.add(`kind_0`);
 
-    let color_0 = document.createElement(`div`);
+    let color0 = document.createElement(`div`);
     //добавляем класс к элементу div
-    color_0.classList.add(`color_0`);
-    //добавляем текст в div color_0
-    color_0.textContent = `color: фиолетовый`;
-    // добавляем вновь созданный элемент в div fruit__info
-    fruit__info.appendChild(`color_0`);
+    color0.classList.add(`color_0`);
 
-    let weight_0 = document.createElement(`div`);
+    let weight0 = document.createElement(`div`);
     //добавляем класс к элементу div
-    weight_0.classList.add(`weight_0`);
-    //добавляем текст в div weight_0
-    weight_0.textContent = `(кг): 13`;
-    // добавляем вновь созданный элемент в div fruit__info
-    fruit__info.appendChild(`weight_0`);
+    weight0.classList.add(`weight_0`);
+
+    //Заполняем divs текстом://
+
+    index0.textContent = `index: ${i}`;
+    kind0.textContent = `kind: ${fruits[i].kind}`;
+    color0.textContent = `color: ${fruits[i].color}`;
+    weight0.textContent = `weight: ${fruits[i].weight}`;
+
+    //добавляем  div/li/ul
+    fruitInfo.appendChild(index0);
+    fruitInfo.appendChild(kind0);
+    fruitInfo.appendChild(color0);
+    fruitInfo.appendChild(weight0);
+
+    fruitItemFruitViolet.appendChild(fruitInfo);
+    fruitsList.appendChild(fruitItemFruitViolet);
+  }
+  for (let j = i; j < fruits.length; j++) {
+    // TODO: формируем новый элемент <li> при помощи document.createElement,
+    // и добавляем в конец списка fruitsList при помощи document.appendChild
+
+    //создаем новый элемент li
+    let fruitItemFruitGreen = document.createElement(`li`);
+    //добавляем класс к новому элементу li
+    fruitItemFruitGreen.classList.add(`fruit__item fruit_green`);
+
+    // создаем новый элемент div с классом fruit__info
+    let fruitInfo = document.createElement(`div`);
+    //добавляем класс к новому элементу div
+    fruitInfo.classList.add(`fruit__info`);
+
+    // создаем новый элемент div с классом index_0
+    let index0 = document.createElement(`div`);
+    //добавляем класс к новому элементу div
+    index0.classList.add(`index_0`);
+
+    // создаем новый элемент div с классом kind_0
+    let kind0 = document.createElement(`div`);
+    //добавляем класс к элементу div
+    kind0.classList.add(`kind_0`);
+
+    let color0 = document.createElement(`div`);
+    //добавляем класс к элементу div
+    color0.classList.add(`color_0`);
+
+    let weight0 = document.createElement(`div`);
+    //добавляем класс к элементу div
+    weight0.classList.add(`weight_0`);
+
+    //Заполняем divs текстом://
+
+    index0.textContent = `index: ${i}`;
+    kind0.textContent = `kind: ${fruits[i].kind}`;
+    color0.textContent = `color: ${fruits[i].color}`;
+    weight0.textContent = `weight: ${fruits[i].weight}`;
+
+    //добавляем  div/li/ul
+    fruitInfo.appendChild(index0);
+    fruitInfo.appendChild(kind0);
+    fruitInfo.appendChild(color0);
+    fruitInfo.appendChild(weight0);
+
+    fruitItemFruitGreen.appendChild(fruitInfo);
+    fruitsList.appendChild(fruitItemFruitGreen);
   }
 };
 
