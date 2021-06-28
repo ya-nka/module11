@@ -79,43 +79,6 @@ const display = () => {
 
     fruitItemFruitViolet.appendChild(fruitInfo);
     fruitsList.appendChild(fruitItemFruitViolet);
-
-    //создаем новый элемент li
-    let fruitItemFruitGreen = document.createElement(`li`);
-    //добавляем класс к новому элементу li
-    fruitItemFruitGreen.classList.add(`fruit__item fruit_green`);
-
-    // создаем новый элемент div с классом fruit__info
-    let fruitInfo = document.createElement(`div`);
-    //добавляем класс к новому элементу div
-    fruitInfo.classList.add(`fruit__info`);
-
-    // создаем новый элемент div с классом index_0
-    let index0 = document.createElement(`div`);
-    //добавляем класс к новому элементу div
-    index0.classList.add(`index_0`);
-
-    // создаем новый элемент div с классом kind_0
-    let kind0 = document.createElement(`div`);
-    //добавляем класс к элементу div
-    kind0.classList.add(`kind_0`);
-
-    let color0 = document.createElement(`div`);
-    //добавляем класс к элементу div
-    color0.classList.add(`color_0`);
-
-    let weight0 = document.createElement(`div`);
-    //добавляем класс к элементу div
-    weight0.classList.add(`weight_0`);
-
-    //добавляем  div/li/ul
-    fruitInfo.appendChild(index0);
-    fruitInfo.appendChild(kind0);
-    fruitInfo.appendChild(color0);
-    fruitInfo.appendChild(weight0);
-
-    fruitItemFruitGreen.appendChild(fruitInfo);
-    fruitsList.appendChild(fruitItemFruitGreen);
   }
 };
 
@@ -141,6 +104,9 @@ const shuffleFruits = () => {
     // вырезаем его из fruits и вставляем в result.
     // ex.: [1, 2, 3], [] => [1, 3], [2] => [3], [2, 1] => [], [2, 1, 3]
     // (массив fruits будет уменьшатся, а result заполняться)
+    let random = getRandomInt(0, fruits.length - 1);
+    let elem = fruits.splice(random, 1)[0];
+    result.push(elem);
   }
 
   fruits = result;
